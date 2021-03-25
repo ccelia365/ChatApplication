@@ -1,0 +1,25 @@
+{
+  "name": "ChatApplication",
+  "version": "1.0.0",
+  "description": "",
+  "main": "chatServer.js",
+  "scripts": {
+    "start": "node chatServer",
+    "dev": "nodemon chatServer"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "express": "^4.17.1",
+    "express-session": "^1.17.1",
+    "mongoose": "^5.11.4",
+    "passport": "^0.4.1",
+    "passport-local": "^1.0.0",
+    "socket.io": "^3.0.3"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.6"
+  }
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Room</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" type="text/css" href="../css/room.css" />
+  <link rel="icon" href="../img/favicon.ico" />
+  <link href="https://fonts.googleapis.com/css?family=Lato|Montserrat&display=swap" rel="stylesheet" />
+  <script type="module" src="../js/room.js"></script>
+</head>
+<!--Pick a room to join or log out-->
+
+<body>
+  <div class="room-container">
+    <header class="room-header">
+      <h3>Chatworks</h3>
+    </header>
+
+    <main class="room-main">
+      <form id="user-Room" method="GET" action="/chat">
+        <div class="select-group">
+
+          <select name="room" id="room" class="select-drop" required>
+            <div class="drop-list">
+              <option value="" disabled selected>Select a room</option>
+              <option value="English">English</option>
+              <option value="Spanish">Spanish</option>
+              <option value="French">French</option>
+              <option value="Italian">Italian</option>
+              <option value="Mandarin">Mandarin</option>
+              <option value="Japanese">Japanese</option>
+            </div>
+          </select>
+          <br>
+          <br>
+          <input class="input-field" name="nickname" id="createNickname" type="text" placeholder="Enter a Nickname"
+            autocomplete="off" required />
+        </div>
+        <br>
+        <br>
+        <button type="submit" class="room-btn">Join Chat</button>
+        <br>
+        <br>
+      </form>
+      <button type="button" class="room-btn" id="logOut-btn">Log Out</button>
+    </main>
+  </div>
+
+
+
+</body>
+
+</html>

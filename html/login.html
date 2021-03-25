@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Login</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" type="text/css" href="../css/login.css" />
+  <link rel="icon" href="../img/favicon.ico" />
+  <link href="https://fonts.googleapis.com/css?family=Lato|Montserrat&display=swap" rel="stylesheet" />
+  <script type="module" src="../js/login.js"></script>
+</head>
+<!--Login/Register to join Chatworks-->
+
+<body>
+  <div class="join-container">
+    <header class="join-header">
+      <h1>Chatworks</h1>
+      <h2>Connect anonymously with strangers</h2>
+      <h2>to learn a new language!!!</h2>
+    </header>
+    <main class="join-main">
+      <div class="button-box">
+        <div id="btn"></div>
+        <button class="choose-Btn" onclick="login()"> Log In </button>
+        <button class="choose-Btn" onclick="register()"> Sign Up </button>
+      </div>
+
+      <p class="notification" id="notification"></p>
+      <form id="login" class="input-group">
+        <input class="input-field" id="userSignIn" type="text" placeholder="Username" autocomplete="off" required />
+        <input class="input-field" id="passwordSignIn" type="password" placeholder="Password" autocomplete="off"
+          required />
+        <br>
+        <br>
+        <br>
+        <button type="submit" id="login-btn" class="submit-btn" onsubmit="saveLogin()">Log In</button>
+      </form>
+      <form id="signUp" class="input-group" method="POST">
+        <input class="input-field" id="name" type="text" placeholder="Full Name" autocomplete="off" required />
+        <input class="input-field" id="userSignUp" type="text" placeholder="Create Username" autocomplete="off"
+          required />
+        <input class="input-field" id="newPassword" type="password" placeholder="New Password" autocomplete="off"
+          required />
+        <input class="input-field" id="confirmPassword" type="password" placeholder="Confirm Password"
+          autocomplete="off" required />
+        <br>
+        <br>
+        <br>
+        <button type="submit" id="signUp-btn" class="submit-btn" onsubmit="saveRegister()">Sign Up</button>
+      </form>
+
+    </main>
+
+  </div>
+  <script>
+    let logIn = document.getElementById("login");
+    let signUp = document.getElementById("signUp");
+    let btn = document.getElementById("btn");
+
+    function register() {
+      logIn.style.left = "-400px";
+      signUp.style.left = "50px";
+      btn.style.left = "110px";
+    }
+
+    function login() {
+      logIn.style.left = "50px";
+      signUp.style.left = "450px";
+      btn.style.left = "0";
+    }
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Chat</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" type="text/css" href="../css/chat.css" />
+  <link rel="icon" href="../img/favicon.ico" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.9.4/qs.min.js"
+    integrity="sha512-BHtomM5XDcUy7tDNcrcX1Eh0RogdWiMdXl3wJcKB3PFekXb3l5aDzymaTher61u6vEZySnoC/SAj2Y/p918Y3w=="
+    crossorigin="anonymous"></script>
+  <script src="/socket.io/socket.io.js"></script>
+  <script type="module" src="../js/chat.js"></script>
+
+</head>
+<!--Messages sent in chat.html-->
+
+<body>
+  <div class="chat-container">
+    <header class="chat-header">
+      <h3 class="app-name">Chatworks</h3>
+    </header>
+
+    <main class="chat-main">
+      <div class="chat-menu">
+        <h4 class="elemH4">Room Name:</h4>
+        <h2 class="whiteElem" id="room-name"></h2>
+        <h4 class="elemH4" id="users">FRIENDS</h4>
+        <ul class="whiteElem" id="user-list"></ul>
+      </div>
+      <div class="leave-room">
+        <form action="/room">
+          <button class="btn" id="leaveRoomBtn"> Leave Room </button>
+        </form>
+      </div>
+      <div class="chat-messages"></div>
+      <div class="chat-input">
+        <form id="chat-input-msg">
+          <input id="msg" type="text" placeholder="Type a messge here" autocomplete="off" required />
+          <button class="btn" type="submit" id="sendBtn">Send</button>
+        </form>
+      </div>
+    </main>
+
+
+  </div>
+
+</body>
+
+</html>
